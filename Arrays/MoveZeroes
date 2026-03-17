@@ -1,4 +1,21 @@
 
+class Solution {
+    public void moveZeroes(int[] nums) {
+        
+        int currentIndex=0;
+
+    for(int i=0; i<nums.length;i++){
+        if (nums[i]!=0){ 
+            nums[currentIndex]=nums[i]; //move numbers that are not zeroes the front
+            currentIndex++;  
+        } 
+    }
+
+
+for(int i=currentIndex; i<nums.length;i++){
+    nums[i]=0; //fill the remaining spaces with zeroes 
+
+    /*readme
 ## Approach
 
 This solution uses the **two-pointer / overwrite technique**:
@@ -27,4 +44,10 @@ This solution uses the **two-pointer / overwrite technique**:
 - Handles edge cases like **all zeros**, **no zeros**, or **empty arrays**.  
 - Efficient for large arrays because it performs **linear-time in-place updates**.  
 - This approach is a common **interview pattern** for in-place array manipulation problems.
-    
+    */
+}
+
+
+    }
+}
+
