@@ -1,0 +1,30 @@
+
+## Approach
+
+This solution uses the **two-pointer / overwrite technique**:
+
+1. **Initialize a pointer** `insertPos` at index `0`. This pointer keeps track of **where the next non-zero element should go**.  
+2. **Iterate through the array**:
+   - If the current element is **non-zero**, place it at `nums[insertPos]`.  
+   - Increment `insertPos` after placing each non-zero element.  
+3. After processing all elements, **fill the remaining positions** from `insertPos` to the end of the array with `0`.  
+
+**Why this works:**
+
+- Preserves the **order of non-zero elements**.  
+- Performs the operation **in-place** using only constant extra space.  
+
+---
+
+## Complexity
+- **Time Complexity:** O(n) — Each element is visited exactly once.  
+- **Space Complexity:** O(1) — Only a few extra variables are used; no additional arrays or collections.  
+
+---
+
+## Notes
+
+- Handles edge cases like **all zeros**, **no zeros**, or **empty arrays**.  
+- Efficient for large arrays because it performs **linear-time in-place updates**.  
+- This approach is a common **interview pattern** for in-place array manipulation problems.
+    
